@@ -1,0 +1,29 @@
+- name: magento
+  url: magento.png
+
+- name: html5
+  url: html5.png
+
+- name: css3
+  url: css3.png
+
+- name: javascript
+  url: javascript.png
+
+# - name: zend
+#   url: zend.png
+
+- name: break
+
+- name: jquery
+  url: jquery.png
+  class: double-size
+
+- name: sass
+  url: sass.png
+
+- name: bootstrap
+  url: bootstrap.png
+
+- name: php
+  url: php.png

@@ -1,0 +1,55 @@
+- section: laptop
+  name: laptop
+  url: laptop.png
+  class: img
+
+- section: laptop
+  name: laptop-bg
+  url: laptop-bg.png
+  class: img-scroll
+
+- section: laptop
+  name: laptop-bg-shadow
+  url: laptop-bg-shadow.png
+  class: img-scroll shadow
+
+- section: tablet
+  name: tablet
+  url: tablet.png
+  class: img
+
+- section: tablet
+  name: tablet-website-title
+  url: tablet-website-title.png
+  class: img-scroll
+
+- section: tablet
+  name: tablet-website-subtitle
+  url: tablet-website-subtitle.png
+  class: img-scroll
+
+- section: tablet
+  name: tablet-text
+  url: tablet-text.png
+  class: img-scroll
+
+
+- section: work
+  name: fulton fish market
+  class: 7u
+
+- section: work
+  name: nightvisionplanet <br> <span>and</span> <br> nightgalaxy
+  class: 5u
+
+- section: work
+  name: sunbuild
+  class: 4u
+
+- section: work
+  name: you got bids
+  class: 4u
+
+- section: work
+  name: practice tabs
+  class: 4u

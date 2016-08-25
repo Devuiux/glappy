@@ -1,0 +1,14 @@
+- name: Arnold Schwarzenegger
+  function: Founder & CEO
+  description: UTC educated engineer, he worked for both startups and digital agencies. His motto":" <br> «Innovate everyday!»
+  image: arnold.jpg
+
+- name: Mark Zuckerberg
+  function: Founder & CFO
+  description: After an international career in both digital creation and consulting, he joined the adventure to cofound Exoskills UK.
+  image: mark.jpg
+
+- name: Sylvester Stalone
+  function: CTO
+  description: After working at Publicis, this technology enthusiast blogger shares his vision of the new digital practices to spot innovations and opportunities of tomorrow.
+  image: sylvester.jpg

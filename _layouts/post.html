@@ -1,0 +1,20 @@
+---
+layout: default
+---
+
+<div class="card">
+
+  <div class="card-header">
+    <h3 class="card-title">{{ page.title }}</h3>
+  </div>
+
+  <div class="card-text card-block">
+    {% if page.teaser %}
+    <p class="">
+      {{ page.teaser }}
+    </p>
+    {% endif %}
+
+    {{ content }}
+  </div>
+</div>

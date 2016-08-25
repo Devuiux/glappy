@@ -1,0 +1,31 @@
+---
+layout: compress
+img: album/casa-de-cultura.jpg
+---
+<!DOCTYPE html>
+<html>
+
+  <head>
+    {% include head.html %}
+  </head>
+
+  <body>
+    <span class="main-bg" style="background-image: url(images/{% if page.img %}{{ page.img }}{% else %}{{ layout.img }}{% endif %})"></span>
+    <!-- Page Wrapper -->
+    <div id="page-wrapper">
+
+      {% include header.html %}
+
+      <main id="main" class="main">
+        {{ content }}
+      </main>
+
+      {% include footer.html %}
+
+      {% include scripts.html %}
+
+    </div>
+
+  </body>
+
+</html>

@@ -1,0 +1,54 @@
+
+{% comment %}
+#
+#   Liquid variables are created at the top to keep the source DRY and clean.
+#   Idea by ericcarlisle.com
+#
+#   Variables › {{ url }} › site.url + site.baseurl
+#   Variables › {{ description }} › excerpt, page.meta_description, or site.description
+#   Variables › {{ title }} › page.title
+#
+{% endcomment %}{% capture ignore %}
+
+{% assign url = site.baseurl | prepend: site.url %}
+
+{% capture description %}{% if page.meta_description %}{{ page.meta_description }}{% elsif page.teaser %}{{ page.teaser }}{% elsif page.excerpt %}{{ page.excerpt }}{% elsif site.description %}{{ site.description }}{% endif %}{% endcapture %}
+{% assign description = description | strip_html | escape | strip %}
+
+{% capture title %}{% if page.meta_title %}{{ page.meta_title}}{% elsif page.title %}{{ page.title }}{% else %}{{ site.title | strip_html | strip }}{% endif %}{% endcapture %}
+
+{% assign title = title | strip_html | escape | strip_newlines %}
+
+{% endcapture %}
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
+
+<meta name="robots" content="noindex">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+<!-- <link rel="stylesheet" href="{{ "/css/main.css" | prepend: url }}" /> -->
+<link rel="stylesheet" type="text/css" href="{{ "/public/css/style.css" | prepend: url }}">
+
+<!-- Search Engine Optimization -->
+<meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+{% if site.google_site_verification %}<meta name="google-site-verification" content="{{ site.google_site_verification}}">{% endif %}
+{% if site.bing_webmastertools_id %}<meta name="msvalidate.01" content="{{ site.bing_webmastertools_id }}" >{% endif %}
+{% if site.google_author %}<link rel="author" href="{{ site.google_author }}">{% endif %}
+{% if site.alexa_verify_id %}<meta name="alexaVerifyID" content="{{ site.alexa_verify_id }}">{% endif %}
+<!-- {% if page.noindex == true %}<meta name="robots" content="noindex">{% endif %} -->
+
+
+<!--[if lte IE 8]><script src="{{ "/js/ie/html5shiv.js" | prepend: site.baseurl }}"></script><![endif]-->
+<link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+<!--[if lte IE 8]><link rel="stylesheet" href="{{ "/css/ie8.css" | prepend: site.baseurl }}" /><![endif]-->
+<!--[if lte IE 9]><link rel="stylesheet" href="{{ "/css/ie9.css" | prepend: site.baseurl }}" /><![endif]-->
+<link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
+
+{% unless page.style == NULL %}
+<style type="text/css">{{ page.style }}</style>
+{% endunless %}

@@ -1,0 +1,52 @@
+---
+layout: landing
+permalink: /
+
+---
+
+{% for post in site.posts %}
+<div class="card">
+
+  {% if post.img %}
+  <a href="{{ post.url }}" class="card-header has-bg-img" style="background-image: url(images/{{ post.img }})">
+    <div class="card-title-area">
+      {% if post.title %}<h3 class="card-link">{{ post.title }}</h3>{% endif %}
+      {% if post.subheadline %}<p class="card-subtitle">{{ post.subheadline }}</p>{% endif %}
+    </div>
+  </a>
+  {% else %}
+  <div class="card-header">
+    {% if post.title %}<h3 class="card-link"><a href="{{ post.url }}">{{ post.title }}</a></h3>{% endif %}
+    {% if post.subheadline %}<p class="card-subtitle">{{ post.subheadline }}</p>{% endif %}
+  </div>
+  {% endif %}
+
+  <div class="card-text card-block">
+      {% if post.meta_description %}{{ post.meta_description | strip_html | escape }}{% else post.teaser %}{{ post.teaser | strip_html | escape }}{% endif %}
+      <a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}" title="Read {{ post.title escape_once }}">Read more</a>
+  </div>
+  <div class="card-footer">
+    <div class="minilogo"></div>
+    <div>
+      <strong>The Newist</strong>
+      <span>2 days ago</span>
+    </div>
+  </div>
+</div>
+{% endfor %}
+
+
+<!-- 
+<nav class="card-footer">
+  <div class="section-spacer"></div>
+  <a href="entry.html" class="demo-nav__button" title="show more">
+    More
+    <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+      <i class="material-icons" role="presentation">arrow_forward</i>
+    </button>
+  </a>
+</nav> -->
+
+
+
+
