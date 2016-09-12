@@ -39,8 +39,8 @@ author: devuiux
 
 # This URL is the main address for absolute links. Don't include a slash at the end.
 #
-url: "https://devuiux.github.io/glappy" # the base hostname & protocol for your site
-baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://devuiux.github.io" # the base hostname & protocol for your site
+baseurl: "/glappy" # the subpath of your site, e.g. /blog
 
 # This URL points directly to the images directory making
 # things easier to link to images in posts and templates. It needs a slash at the end.
