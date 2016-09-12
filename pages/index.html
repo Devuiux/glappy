@@ -8,7 +8,7 @@ published: true
 <div class="card">
 
   {% if post.img %}
-  <a href="{{ post.url }}" class="card-header has-bg-img" style="background-image: url(images/{{ post.img }})">
+  <a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}" class="card-header has-bg-img" style="background-image: url(images/{{ post.img }})">
     <div class="card-title-area">
       {% if post.title %}<h3 class="card-link">{{ post.title }}</h3>{% endif %}
       {% if post.subheadline %}<p class="card-subtitle">{{ post.subheadline }}</p>{% endif %}
