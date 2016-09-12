@@ -39,7 +39,7 @@ author: devuiux
 
 # This URL is the main address for absolute links. Don't include a slash at the end.
 #
-url: "http://devuiux.github.io/glappy" # the base hostname & protocol for your site
+url: "https://devuiux.github.io/glappy" # the base hostname & protocol for your site
 baseurl: "" # the subpath of your site, e.g. /blog
 
 # This URL points directly to the images directory making
@@ -48,7 +48,7 @@ baseurl: "" # the subpath of your site, e.g. /blog
 # Example: <img src="{{ site.urlimg }}{{ post.image.title }}" />
 # Markdown-Example for posts ![Image Text]({{ site.urlimg }}image.jpg)
 #
-urlimg: "http://devuiux.github.io/glappy/images"
+urlimg: "https://devuiux.github.io/glappy/images"
 
 # Logo size is 600x80 pixels
 logo: "logo.png"
