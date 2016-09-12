@@ -1,6 +1,6 @@
 <!-- Footer -->
 <footer id="footer" class="">
-    <div class="">
+    <div class="left">
         {% for socloc in site.social %} {% if socloc[1] %} {% if socloc[0] == 'email' %}
         <button href="{{ socloc[1] }}" class="social-btn social-btn__{{ socloc[1] }}">
             <span class="visuallyhidden">{{ socloc[1] }}</span>
@@ -11,7 +11,7 @@
         </button>
         {% endif %} {% endif %} {% endfor %}
     </div>
-    <div class="">
+    <div class="right">
         <li>&copy; {% assign thisyear = site.time | date: "%Y" %} {% if site.first_published %} {% capture diff %}{{ site.first_published | minus:thisyear }}{% endcapture %} {% if diff contains '-' %}{{ site.first_published }},{% endif %} {% endif %} {{ thisyear }} {% if site.owner %}{{ site.owner }}{% else %}{{ site.title }}{% endif %}</li>
         <li>Design:
             <a href="" target="_blank"></a>{% if site.owner %}{{ site.owner }}{% else %}{{ site.title }}{% endif %}</li>
