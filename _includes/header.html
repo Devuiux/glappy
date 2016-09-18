@@ -1,15 +1,6 @@
 {% assign url = site.baseurl | prepend: site.url %}
 
 <!-- Header -->
-<header id="header" {% if page.url == '/' %} class="alt"{% endif %}>
-  <h1><a href="{{ url }}">{{ site.title }}</a></h1>
-<!--   <nav id="nav">
-    <ul>
-      {% for title in site.navigation %}
-      {% if title %}
-      <li><a href="#{{ title }}">{{ title }}</a></li>
-      {% endif %}
-      {% endfor %}
-    </ul>
-  </nav> -->
+<header>
+	<h1><a href="{{ url }}">{{ site.title }}</a></h1>
 </header>

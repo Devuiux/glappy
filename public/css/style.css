@@ -5241,9 +5241,6 @@ img {
   z-index: 900; }
 
 .card {
-  max-width: 640px;
-  margin-left: auto;
-  margin-right: auto;
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12); }
 
 a.card-header {
@@ -5297,7 +5294,23 @@ body,
   -moz-flex: 1 0 0;
   -ms-flex: 1 0 0;
   flex: 1 0 0;
-  padding: 1.25rem; }
+  padding: 1.25rem;
+  max-width: 1000px;
+  margin: 0 auto; }
+
+.col-main {
+  width: 70%;
+  float: left; }
+
+.col-right {
+  width: 30%;
+  float: left;
+  position: relative; }
+
+.col-right .right-wrapper {
+  position: fixed;
+  padding-left: 1rem;
+  z-index: 1; }
 
 footer {
   background-color: #fff; }
