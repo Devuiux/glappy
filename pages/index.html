@@ -4,28 +4,25 @@ permalink: /
 published: true
 ---
 
-<div class="col-main">
-  {% for post in site.posts %}
-  <div class="card">
-    {% if post.img %}
-    <a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}" class="card-header has-bg-img" style="background-image: url(images/{{ post.img }})">
-      <div class="card-title-area">
-        {% if post.title %}<h3 class="card-link">{{ post.title }}</h3>{% endif %}
-        {% if post.subheadline %}<h5 class="card-subtitle">{{ post.subheadline }}</h5>{% endif %}
-      </div>
-    </a>
-    {% else %}
-    <div class="card-header">
-      {% if post.title %}<h3 class="card-link"><a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h3>{% endif %}
+{% for post in site.posts %}
+<div class="card">
+  {% if post.img %}
+  <a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}" class="card-header has-bg-img" style="background-image: url(images/{{ post.img }})">
+    <div class="card-title-area">
+      {% if post.title %}<h3 class="card-link">{{ post.title }}</h3>{% endif %}
       {% if post.subheadline %}<h5 class="card-subtitle">{{ post.subheadline }}</h5>{% endif %}
     </div>
-    {% endif %}
-  
-    <div class="card-text card-block">
-        {% if post.meta_description %}{{ post.meta_description | strip_html | escape }}{% else post.teaser %}{{ post.teaser | strip_html | escape }}{% endif %}
-        <a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}" title="Read {{ post.title escape_once }}">Read more</a>
-    </div>
+  </a>
+  {% else %}
+  <div class="card-header">
+    {% if post.title %}<h3 class="card-link"><a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h3>{% endif %}
+    {% if post.subheadline %}<h5 class="card-subtitle">{{ post.subheadline }}</h5>{% endif %}
   </div>
-  {% endfor %}
+  {% endif %}
+
+  <div class="card-text card-block">
+      {% if post.meta_description %}{{ post.meta_description | strip_html | escape }}{% else post.teaser %}{{ post.teaser | strip_html | escape }}{% endif %}
+      <a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}" title="Read {{ post.title escape_once }}">Read more</a>
+  </div>
 </div>
-<div class="col-right"><div class="right-wrapper">{% include fixedCard.html %}</div></div>
+{% endfor %}

@@ -1,6 +1,5 @@
 ---
 layout: compress
-img: album/casa-de-cultura.jpg
 ---
 <!DOCTYPE html>
 <html>
@@ -17,7 +16,10 @@ img: album/casa-de-cultura.jpg
       {% include header.html %}
 
       <main id="main" class="main container">
-        {{ content }}
+        <div class="col-main">
+          {{ content }}
+        </div>
+        <div class="col-right"><div class="right-wrapper">{% include fixedCard.html %}</div></div>
       </main>
 
       {% include footer.html %}
