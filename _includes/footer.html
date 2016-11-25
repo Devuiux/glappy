@@ -1,17 +1,11 @@
 <!-- Footer -->
 <footer id="footer" class="">
-    <div class="left">
-        {% for socloc in site.social %} {% if socloc[1] %} {% if socloc[0] == 'email' %}
-        <button href="{{ socloc[1] }}" class="social-btn social-btn__{{ socloc[1] }}">
-            <span class="visuallyhidden">{{ socloc[1] }}</span>
-        </button>
-        {% else %}
-        <button href="{{ socloc[0] }}" class="social-btn social-btn__{{ socloc[0] }}">
-            <span class="visuallyhidden">{{ socloc[0] }}</span>
-        </button>
-        {% endif %} {% endif %} {% endfor %}
+    <div class="footer-up">
+        <div class="container spacer-y11">
+            {% include social.html %}
+        </div>
     </div>
-    <div class="right">
+    <div class="footer-down font-size-13 text-xs-center container spacer-y">
         <li>&copy; {% assign thisyear = site.time | date: "%Y" %} {% if site.first_published %} {% capture diff %}{{ site.first_published | minus:thisyear }}{% endcapture %} {% if diff contains '-' %}{{ site.first_published }},{% endif %} {% endif %} {{ thisyear }} {% if site.owner %}{{ site.owner }}{% else %}{{ site.title }}{% endif %}</li>
         <li>Design:
             <a href="" target="_blank"></a>{% if site.owner %}{{ site.owner }}{% else %}{{ site.title }}{% endif %}</li>

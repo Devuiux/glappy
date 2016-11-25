@@ -9,16 +9,38 @@
 	z-index: 900
 	
 .card
-	box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12)
+/* 	box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12) */
+
+.card-block, .card-header
+	padding-left: 0
+	padding-right: 0
+
+.card-title-area
+	color: #fff
+
+	.card-link, .card-subtitle
+		text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4)
 
 a.card-header 
 	display: block
 
+.card-link
+	letter-spacing: 1px
+
+	a 
+		color: $body-color
+
+.card-header
+
+	&:first-child
+		border-radius: .2rem
+		
 .has-bg-img
 	min-height:	340px
 	background-position: center
 	background-size: cover
 	position: relative
+	border: 1px solid rgba(0, 0, 0, 0.11)
 
 .card-title-area
 	position: absolute
@@ -37,3 +59,10 @@ a.card-header
 	bottom: 0
 	top: 0
 	position: fixed
+
+.font-size-13
+	font-size: .928rem
+
+.spacer-y
+	padding-top: $spacer-y
+	padding-bottom: $spacer-y

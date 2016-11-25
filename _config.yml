@@ -162,11 +162,12 @@ sass:
 google_analytics_tracking_id: #UA-60112281-1
 
 social:
-  twitter: https://twitter.com/<username>
+  # twitter: https://twitter.com/<username>
   # github: https://github.com/<username>
-  linkedin-box: https://linkedin.com/in/<username>
-  facebook-box: https://facebook.com/<username>
-  gplus: https://plus.google.com/u/0/+<username>
+  # linkedin-box: https://linkedin.com/in/<username>
+  facebook-box: https://facebook.com/GlappyArtStudio
+  behance: https://www.behance.net/iulian_moldovan
+  # gplus: https://plus.google.com/u/0/+<username>
   #email: /contact/
   #flickr:
   #instagram:

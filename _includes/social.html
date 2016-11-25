@@ -1,0 +1,11 @@
+<div class="social">
+	{% for socloc in site.social %} {% if socloc[1] %} {% if socloc[0] == 'email' %}
+	<a href="{{ socloc[1] }}" class="social-btn social-btn__{{ socloc[1] }}" target="_blank">
+	    <span class="visuallyhidden">{{ socloc[1] }}</span>
+	</a>
+	{% else %}
+	<a href="{{ socloc[1] }}" class="social-btn social-btn__{{ socloc[0] }}" target="_blank">
+	    <span class="visuallyhidden">{{ socloc[0] }}</span>
+	</a>
+	{% endif %} {% endif %} {% endfor %}
+</div>
