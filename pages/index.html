@@ -28,9 +28,6 @@ published: true
 {% endfor %}
 
 {% for project in site.data.ttestt-projects.projects %}
-  Hello {{project.name}}
-
-
 <div class="card">
   {% if project.covers.404 %}
   <a href="{{ project.url }}" class="card-header has-bg-img" style="background-image: url({{ project.covers.404 }})">
