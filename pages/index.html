@@ -4,7 +4,7 @@ permalink: /
 published: true
 ---
 
-{% for post in site.posts %}
+{% for post in site.posts limit:2 %}
 <div class="card">
   {% if post.img %}
   <a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}" class="card-header has-bg-img" style="background-image: url(images/{{ post.img }})">
@@ -23,6 +23,36 @@ published: true
   <div class="card-text card-block">
       {% if post.meta_description %}{{ post.meta_description | strip_html | escape }}{% else post.teaser %}{{ post.teaser | strip_html | escape }}{% endif %}
       <a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}" title="Read {{ post.title escape_once }}">Read more</a>
+  </div>
+</div>
+{% endfor %}
+
+{% for project in site.data.ttestt-projects.projects %}
+  Hello {{project.name}}
+
+
+<div class="card">
+  {% if project.covers.404 %}
+  <a href="{{ project.url }}" class="card-header has-bg-img" style="background-image: url({{ project.covers.404 }})">
+    <div class="card-title-area">
+      {% if project.name %}<h3 class="card-link">{{ project.name }}</h3>{% endif %}
+      {% if project.subheadline %}<h5 class="card-subtitle">{{ project.subheadline }}</h5>{% endif %}
+    </div>
+  </a>
+  {% else %}
+  <div class="card-header">
+    {% if project.name %}<h3 class="card-link"><a href="{{ project.url }}">{{ project.name }}</a></h3>{% endif %}
+    {% if project.subheadline %}<h5 class="card-subtitle">{{ project.subheadline }}</h5>{% endif %}
+  </div>
+  {% endif %}
+
+  <div class="card-text card-block">
+      {% if project.meta_description %}
+        {{ project.meta_description | strip_html | escape }}
+      {% elsif project.teaser %}
+        {{ project.teaser | strip_html | escape }}
+        <a href="{{ project.url }}" title="Read {{ project.name escape_once }}">Read more</a>
+      {% endif %}
   </div>
 </div>
 {% endfor %}

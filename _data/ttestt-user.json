@@ -1,0 +1,63 @@
+{
+  "user": {
+    "id": 313371,
+    "first_name": "Iulian",
+    "last_name": "Moldovan",
+    "username": "iulian_moldovan",
+    "city": "Bucharest",
+    "state": "",
+    "country": "Romania",
+    "location": "Bucharest, Romania",
+    "company": "mosaic",
+    "occupation": "Mosaic Artist",
+    "created_on": 1297173827,
+    "url": "https://www.behance.net/iulian_moldovan",
+    "images": {
+      "50": "https://mir-s3-cdn-cf.behance.net/user/50/313371.53ad1cab65aa4.jpg",
+      "100": "https://mir-s3-cdn-cf.behance.net/user/100/313371.53ad1cab65aa4.jpg",
+      "115": "https://mir-s3-cdn-cf.behance.net/user/115/313371.53ad1cab65aa4.jpg",
+      "138": "https://mir-s3-cdn-cf.behance.net/user/138/313371.53ad1cab65aa4.jpg",
+      "230": "https://mir-s3-cdn-cf.behance.net/user/230/313371.53ad1cab65aa4.jpg",
+      "276": "https://mir-s3-cdn-cf.behance.net/user/276/313371.53ad1cab65aa4.jpg"
+    },
+    "display_name": "Iulian Moldovan",
+    "fields": [
+      "Art Direction",
+      "Fine Arts",
+      "Creative Direction"
+    ],
+    "has_default_image": 0,
+    "website": "http://iulianmoldovan.blogspot.com",
+    "stats": {
+      "followers": 180,
+      "following": 290,
+      "appreciations": 581,
+      "views": 6265,
+      "comments": 40,
+      "team_members": 0
+    },
+    "twitter": "",
+    "links": [
+      {
+        "title": "Personal Blog",
+        "url": "http://iulianmoldovan.blogspot.com"
+      },
+      {
+        "title": "Glappy",
+        "url": "http://glappy.wordpress.com"
+      }
+    ],
+    "sections": [
+      
+    ],
+    "social_links": [
+      {
+        "social_id": 2,
+        "url": "http://facebook.com/iulian.moldovan.emil",
+        "service_name": "Facebook",
+        "value": "iulian.moldovan.emil"
+      }
+    ]
+  },
+  "http_code": 200
+}

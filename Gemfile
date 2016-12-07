@@ -5,8 +5,8 @@ source 'https://rubygems.org'
 
 group :development, :test do
   gem 'jekyll'
-  #gem 'jekyll-redirect-from', '~> 0.9.0'
   gem 'jekyll-sitemap'
   gem 'sass'
   gem 'scss_lint'
+  gem 'hash-joiner'
 end
